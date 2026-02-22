@@ -1,0 +1,40 @@
+import { FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { company } from "../../data/company";
+
+const ContactInfo = () => {
+  return (
+    <div className="contact-info">
+      <h3>Contact Information</h3>
+      <p>
+        Speak directly with our rendering specialists to discuss your project scope, systems, and timelines.
+      </p>
+      <ul>
+        <li>
+          <a href={`tel:${company.phoneTel}`}>{company.phone}</a>
+        </li>
+        <li>
+          <a href={`mailto:${company.email}`}>{company.email}</a>
+        </li>
+        <li>{company.address}</li>
+      </ul>
+      <div className="contact-block">
+        <h4>Service Areas</h4>
+        <p>{company.serviceAreas.join(" · ")}</p>
+      </div>
+      <div className="contact-block">
+        <h4>Business Hours</h4>
+        <p>{company.hours.join(" | ")}</p>
+      </div>
+      <div className="socials">
+        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">
+          <FaInstagram size={24} />
+        </a>
+        <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer">
+          <FaFacebookF size={24} />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default ContactInfo;
