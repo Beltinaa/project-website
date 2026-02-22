@@ -15,7 +15,7 @@ const Contact = () => {
       <PageHero
         title="Get In Touch"
         subtitle="Request a Quote from KYR Construction Ltd"
-        backgroundImage="/images/rendering-02.jpg"
+        backgroundImage="/images/background.png"
       />
       <section className="section">
         <div className="container">

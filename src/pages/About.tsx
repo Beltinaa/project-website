@@ -16,7 +16,7 @@ const About = () => {
       <PageHero
         title="About KYR Construction"
         subtitle="Rendering-First Craftsmanship Built on 15+ Years of Experience"
-        backgroundImage="/images/rendering-06.jpg"
+        backgroundImage="/images/background.png"
       />
       <section className="section">
         <div className="container split">

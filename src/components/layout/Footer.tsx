@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-divider" aria-hidden="true"></div>
         <div className="footer-grid">
           <div>
-            <div className="logo">
-              <img src="/logo.png" alt={`${company.name} logo`} loading="lazy" />
+            <div className="footer-logo">
+              <img src="/images/logo.png" alt={`${company.name} logo`} loading="lazy" />
             </div>
             <p>
               Rendering specialists and approved K Rend &amp; Weber applicators delivering premium finishes and

@@ -5,7 +5,7 @@ import { company } from "../../data/company";
 
 const HeroSection = () => {
   const heroStyle = {
-    "--hero-image": "url('/images/rendering-09.jpg')",
+    "--hero-image": "url('/images/main-background.png')",
   } as CSSProperties;
 
   return (
@@ -17,7 +17,7 @@ const HeroSection = () => {
         <h2>Rendering Specialists | Approved K Rend &amp; Weber Applicators</h2>
         <p className="hero-subtitle">{company.secondaryTagline}</p>
         <Button href="/contact" variant="accent" size="lg">
-          Get a Free Quote
+          GET A FREE QUOTE
         </Button>
       </div>
       <a className="scroll-indicator" href="#rendering-spotlight" aria-label="Scroll to rendering spotlight">

@@ -13,7 +13,7 @@ const ContactCTA = () => {
               <p className="section-lead">Get a free, no-obligation quote today.</p>
             </div>
             <Button href="/contact" variant="accent" size="md">
-              Contact Us Now
+              GET A FREE QUOTE
             </Button>
           </div>
         </ScrollReveal>

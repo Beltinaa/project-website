@@ -28,8 +28,14 @@ const Navbar = () => {
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
       <div className="container nav-inner">
-        <Link className="logo" to="/" aria-label={`${company.name} home`}>
-          <img src="/logo.png" alt={`${company.name} logo`} loading="lazy" />
+        <Link className="brand" to="/" aria-label={`${company.name} home`}>
+          <img
+            className="brand-icon"
+            src="/images/icon.png"
+            alt={`${company.name} icon`}
+            loading="eager"
+          />
+          <span className="brand-text">{company.name}</span>
         </Link>
         <nav className="nav" aria-label="Main">
           <ul className="nav-links">
@@ -48,7 +54,7 @@ const Navbar = () => {
         </nav>
         <div className="nav-cta">
           <Button href="/contact" variant="accent" size="sm">
-            Get a Free Quote
+            GET A FREE QUOTE
           </Button>
         </div>
         <button
@@ -78,7 +84,7 @@ const Navbar = () => {
           ))}
         </ul>
         <Button href="/contact" variant="accent" size="sm" onClick={closeMenu}>
-          Get a Free Quote
+          GET A FREE QUOTE
         </Button>
         <div className="nav-socials">
           <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">

@@ -263,17 +263,25 @@ p {
   gap: 24px;
 }
 
-.logo {
+.brand {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
   height: var(--header-height);
 }
 
-.logo img {
-  height: 52px;
-  width: auto;
-  max-width: 150px;
-  object-fit: contain;
+.brand-icon {
+  width: 42px;
+  height: auto;
+}
+
+.brand-text {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -880,19 +888,17 @@ p {
   font-size: 14px;
 }
 
-.footer .logo {
+.footer-logo {
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
-  background-color: var(--bg-primary);
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0;
+  margin-bottom: 16px;
 }
 
-.footer .logo img {
-  height: 46px;
+.footer-logo img {
+  height: 86px;
   width: auto;
-  max-width: 150px;
+  max-width: 260px;
   object-fit: contain;
 }
 
@@ -1575,14 +1581,18 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .logo img {
-    height: 44px;
-    max-width: 110px;
+  .brand-icon {
+    width: 34px;
   }
 
-  .footer .logo img {
-    height: 40px;
-    max-width: 120px;
+  .brand-text {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-logo img {
+    height: 64px;
+    max-width: 200px;
   }
 
   .reveal,

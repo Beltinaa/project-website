@@ -18,7 +18,7 @@ const Rendering = () => {
       <PageHero
         title="Rendering Specialists"
         subtitle="Approved Applicators of K Rend & Weber Systems"
-        backgroundImage="/images/rendering-01.jpg"
+        backgroundImage="/images/background.png"
       />
       <RenderingIntro />
       <RenderSystems />
@@ -31,7 +31,7 @@ const Rendering = () => {
             <div className="cta-inline">
               <h2>Ready for a Premium Rendering Finish?</h2>
               <Button href="/contact" variant="accent" size="sm">
-                Get a Free Rendering Quote
+                GET A FREE QUOTE
               </Button>
             </div>
           </ScrollReveal>
