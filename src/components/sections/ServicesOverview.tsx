@@ -1,4 +1,4 @@
-import { Building2, Ruler, TreePine, Paintbrush } from "lucide-react";
+import { TreePine, Paintbrush } from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
 import ScrollReveal from "../animations/ScrollReveal";
 import ServiceCard from "../ui/ServiceCard";
@@ -6,9 +6,7 @@ import { serviceCards } from "../../data/services";
 
 const iconMap = {
   rendering: Paintbrush,
-  formwork: Ruler,
   landscaping: TreePine,
-  groundworks: Building2,
 };
 
 const ServicesOverview = () => {

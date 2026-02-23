@@ -1,8 +1,4 @@
-export type GalleryCategory =
-  | "Rendering"
-  | "Formwork"
-  | "Hard Landscaping"
-  | "Civil Engineering";
+export type GalleryCategory = "Rendering";
 
 export type GalleryItem = {
   id: string;
@@ -27,20 +23,20 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "rendering-03",
     src: "/images/rendering-03.jpg",
-    category: "Formwork",
-    title: "Concrete framework preparation with precision formwork",
+    category: "Rendering",
+    title: "Smooth render application with crisp detailing",
   },
   {
     id: "rendering-04",
     src: "/images/rendering-04.jpg",
-    category: "Hard Landscaping",
-    title: "Hard landscaping build with structured external finishes",
+    category: "Rendering",
+    title: "Rendered elevation with refined architectural finish",
   },
   {
     id: "rendering-05",
     src: "/images/rendering-05.jpg",
-    category: "Civil Engineering",
-    title: "Groundworks stage with stable structural base",
+    category: "Rendering",
+    title: "Consistent render coat with premium texture",
   },
   {
     id: "rendering-06",
@@ -77,9 +73,6 @@ export const galleryItems: GalleryItem[] = [
 export const galleryCategories = [
   "All",
   "Rendering",
-  "Formwork",
-  "Hard Landscaping",
-  "Civil Engineering",
 ] as const;
 
 export type GalleryFilter = (typeof galleryCategories)[number];

@@ -10,12 +10,12 @@ const Contact = () => {
     <>
       <PageMeta
         title="Contact KYR Construction | Get In Touch"
-        description="Contact KYR Construction Ltd for rendering, formwork, hard landscaping, and groundworks enquiries."
+        description="Contact KYR Construction Ltd for rendering and hard landscaping across Barking, Luton, Greater London, and the South East."
       />
       <PageHero
         title="Get In Touch"
-        subtitle="Request a Quote from KYR Construction Ltd"
-        backgroundImage="/images/background.png"
+        subtitle="Serving Barking, Luton & Greater London"
+        backgroundImage="/images/background5.png"
       />
       <section className="section">
         <div className="container">

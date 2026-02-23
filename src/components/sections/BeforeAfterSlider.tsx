@@ -1,4 +1,4 @@
-import { useRef, useState, type PointerEvent } from "react";
+import { useRef, useState, type PointerEvent, type CSSProperties } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export type BeforeAfterSliderProps = {
@@ -36,25 +36,48 @@ const BeforeAfterSlider = ({ before, after, caption }: BeforeAfterSliderProps) =
     setDragging(false);
   };
 
+  const sliderStyle = {
+    "--position": `${position}%`,
+  } as CSSProperties;
+
   return (
     <div className="before-after">
       <div
         ref={containerRef}
         className="before-after-slider"
+        style={sliderStyle}
+        onPointerDown={(event) => event.preventDefault()}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
       >
-        <img src={after} alt="After rendering" loading="lazy" className="after-image" />
-        <div className="before-image" style={{ width: `${position}%` }}>
-          <img src={before} alt="Before rendering" loading="lazy" />
+        <img
+          src={after}
+          alt="After rendering"
+          loading="lazy"
+          className="after-image"
+          draggable={false}
+          onDragStart={(event) => event.preventDefault()}
+        />
+        <div className="before-layer">
+          <img
+            src={before}
+            alt="Before rendering"
+            loading="lazy"
+            className="before-image"
+            draggable={false}
+            onDragStart={(event) => event.preventDefault()}
+          />
         </div>
         <span className="before-label">Before</span>
         <span className="after-label">After</span>
         <div
           className="slider-handle"
-          style={{ left: `${position}%` }}
-          onPointerDown={handlePointerDown}
+          onPointerDown={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            handlePointerDown(event);
+          }}
           role="slider"
           aria-valuemin={0}
           aria-valuemax={100}

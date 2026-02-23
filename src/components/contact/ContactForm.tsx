@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import { company } from "../../data/company";
 import Button from "../ui/Button";
 
 const initialState = {
@@ -50,11 +51,15 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitted(false);
 
-    window.setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setValues(initialState);
-    }, 1200);
+    const subject = encodeURIComponent("New project enquiry - KYR Construction Ltd");
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email}\nService Needed: ${values.service}\n\nMessage:\n${values.message}`
+    );
+    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
+
+    setIsSubmitting(false);
+    setSubmitted(true);
+    setValues(initialState);
   };
 
   return (
@@ -100,9 +105,7 @@ const ContactForm = () => {
           Service Needed
           <select name="service" value={values.service} onChange={handleChange}>
             <option>Rendering</option>
-            <option>Formwork &amp; Framework</option>
             <option>Hard Landscaping</option>
-            <option>Civil Engineering &amp; Groundworks</option>
             <option>Other</option>
           </select>
         </label>

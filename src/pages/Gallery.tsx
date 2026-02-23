@@ -7,12 +7,12 @@ const Gallery = () => {
     <>
       <PageMeta
         title="Project Gallery | KYR Construction Ltd"
-        description="Explore KYR Construction Ltd projects across rendering, formwork, hard landscaping, and civil engineering."
+        description="Explore KYR Construction Ltd rendering projects across Barking, Luton, and Greater London."
       />
       <PageHero
         title="Our Work"
         subtitle="Premium Rendering and Construction Projects"
-        backgroundImage="/images/background.png"
+        backgroundImage="/images/background4.png"
       />
       <section className="section">
         <div className="container">

@@ -13,12 +13,12 @@ const Rendering = () => {
     <>
       <PageMeta
         title="Rendering Specialists | KYR Construction Ltd"
-        description="Approved K Rend & Weber applicators delivering premium rendering systems, insulated facades, and long-lasting finishes across the UK."
+        description="Approved K Rend & Weber applicators delivering premium rendering systems across Barking, Luton, Greater London, and the South East, with availability across the UK on request."
       />
       <PageHero
         title="Rendering Specialists"
         subtitle="Approved Applicators of K Rend & Weber Systems"
-        backgroundImage="/images/background.png"
+        backgroundImage="/images/background1.png"
       />
       <RenderingIntro />
       <RenderSystems />

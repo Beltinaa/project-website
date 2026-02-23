@@ -11,12 +11,12 @@ const Services = () => {
     <>
       <PageMeta
         title="Our Services | KYR Construction Ltd"
-        description="Rendering specialists and approved K Rend & Weber applicators. Explore KYR Construction Ltd services including formwork, hard landscaping, and groundworks."
+        description="Rendering specialists and approved K Rend & Weber applicators. Explore KYR Construction Ltd services including rendering and hard landscaping."
       />
       <PageHero
         title="Our Services"
         subtitle="Rendering Specialists & Approved K Rend and Weber Applicators"
-        backgroundImage="/images/background.png"
+        backgroundImage="/images/background2.png"
       />
       <section className="section service-detail service-feature" id="rendering">
         <div className="container split">
@@ -48,26 +48,12 @@ const Services = () => {
         </div>
       </section>
       <ServiceDetailSection
-        id="formwork"
-        title={serviceDetails.formwork.title}
-        paragraphs={serviceDetails.formwork.paragraphs}
-        image={serviceDetails.formwork.image}
-        ctaLabel={serviceDetails.formwork.cta}
-      />
-      <ServiceDetailSection
         id="landscaping"
         title={serviceDetails.landscaping.title}
         paragraphs={serviceDetails.landscaping.paragraphs}
         image={serviceDetails.landscaping.image}
         ctaLabel={serviceDetails.landscaping.cta}
         reverse
-      />
-      <ServiceDetailSection
-        id="groundworks"
-        title={serviceDetails.groundworks.title}
-        paragraphs={serviceDetails.groundworks.paragraphs}
-        image={serviceDetails.groundworks.image}
-        ctaLabel={serviceDetails.groundworks.cta}
       />
       <section className="section section-muted">
         <div className="container">

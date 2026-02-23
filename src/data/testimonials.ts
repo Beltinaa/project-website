@@ -14,7 +14,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Michael T., Hertfordshire",
     quote:
-      "From formwork to rendering, the team delivered with total professionalism. The finish is immaculate and built to last.",
+      "From survey to rendering, the team delivered with total professionalism. The finish is immaculate and built to last.",
     rating: 5,
   },
   {

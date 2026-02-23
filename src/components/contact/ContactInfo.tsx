@@ -6,7 +6,8 @@ const ContactInfo = () => {
     <div className="contact-info">
       <h3>Contact Information</h3>
       <p>
-        Speak directly with our rendering specialists to discuss your project scope, systems, and timelines.
+        Speak directly with our rendering specialists to discuss your project scope, systems, and timelines across
+        Barking, Luton, and Greater London.
       </p>
       <ul>
         <li>
@@ -20,6 +21,8 @@ const ContactInfo = () => {
       <div className="contact-block">
         <h4>Service Areas</h4>
         <p>{company.serviceAreas.join(" · ")}</p>
+        <p>Surrounding areas of East London and North London, plus South East England.</p>
+        <p>Available across the UK for larger projects on request.</p>
       </div>
       <div className="contact-block">
         <h4>Business Hours</h4>

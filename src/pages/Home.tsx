@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <PageMeta
         title="KYR Construction Ltd | Rendering Specialists"
-        description="KYR Construction Ltd are rendering specialists and approved K Rend & Weber applicators delivering premium finishes across the UK."
+        description="KYR Construction Ltd are rendering specialists and approved K Rend & Weber applicators serving Barking, Luton, Greater London, and the South East, with availability across the UK on request."
       />
       <HeroSection />
       <RenderingSpotlight />

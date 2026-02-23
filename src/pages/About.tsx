@@ -11,22 +11,22 @@ const About = () => {
     <>
       <PageMeta
         title="About KYR Construction | Rendering Specialists"
-        description="Learn about KYR Construction Ltd, a rendering-first construction company with 15+ years of premium workmanship across the UK."
+        description="Learn about KYR Construction Ltd, a rendering-first construction company serving Barking, Luton, Greater London, and the South East, with availability across the UK on request."
       />
       <PageHero
         title="About KYR Construction"
         subtitle="Rendering-First Craftsmanship Built on 15+ Years of Experience"
-        backgroundImage="/images/background.png"
+        backgroundImage="/images/background3.png"
       />
       <section className="section">
         <div className="container split">
           <ScrollReveal>
             <div className="split-text">
-              <SectionHeading title="Our Story" subtitle="Specialists Trusted Across the UK" />
+              <SectionHeading title="Our Story" subtitle="Specialists Trusted Across East London & Greater London" />
               <p>
                 KYR Construction Ltd was founded with a clear focus on premium rendering. Over the past 15+ years, we
-                have grown into a trusted partner for homeowners, developers, and commercial clients seeking dependable
-                façades and structural works.
+                have grown into a trusted partner for homeowners, developers, and commercial clients across Barking,
+                Luton, and Greater London seeking dependable façades and structural works.
               </p>
               <p>
                 Our reputation is built on expert preparation, clean detailing, and approved application of K Rend and
@@ -34,8 +34,9 @@ const About = () => {
                 adherence to safety standards.
               </p>
               <p>
-                Today, KYR continues to expand across London and surrounding counties, delivering refined finishes and
-                robust construction solutions with a rendering-first mindset.
+                Today, KYR continues to expand across East London, North London, and the South East, delivering refined
+                finishes and robust construction solutions with a rendering-first mindset. For larger projects, we are
+                available across the UK on request.
               </p>
             </div>
           </ScrollReveal>
@@ -55,8 +56,8 @@ const About = () => {
             <div className="split-text">
               <SectionHeading title="Our Team" subtitle="Dedicated Workforce" />
               <p>
-                Our skilled teams are trained to deliver consistent quality across rendering, formwork, hard
-                landscaping, and groundworks. We keep sites tidy, schedules clear, and standards uncompromising.
+                Our skilled teams are trained to deliver consistent quality across rendering and hard landscaping. We
+                keep sites tidy, schedules clear, and standards uncompromising.
               </p>
               <Button href="/contact" variant="accent" size="sm">
                 Work With Us

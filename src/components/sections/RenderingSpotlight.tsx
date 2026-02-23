@@ -27,9 +27,9 @@ const RenderingSpotlight = () => {
         <SectionHeading title="Rendering Focus" subtitle="London's Trusted Rendering Experts" />
         <ScrollReveal delay={150}>
           <p className="section-lead">
-            KYR Construction Ltd are specialist rendering contractors delivering refined, long-lasting finishes. As
-            approved K Rend and Weber applicators, we specify and apply premium systems built for performance in the
-            UK climate.
+            KYR Construction Ltd are specialist rendering contractors delivering refined, long-lasting finishes across
+            Barking, Luton, East London, and Greater London. As approved K Rend and Weber applicators, we specify and
+            apply premium systems built for performance in the UK climate, with availability across the UK on request.
           </p>
         </ScrollReveal>
         <div className="feature-grid">

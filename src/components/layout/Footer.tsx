@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-logo">
-              <img src="/images/logo.png" alt={`${company.name} logo`} loading="lazy" />
+              <img src="/images/icon.png" alt={`${company.name} logo`} loading="lazy" />
             </div>
             <p>
-              Rendering specialists and approved K Rend &amp; Weber applicators delivering premium finishes and
-              structural works across the UK.
+              Rendering specialists and approved K Rend &amp; Weber applicators based in Barking and Luton, serving
+              Greater London, East London, and the South East. Available across the UK for larger projects on request.
             </p>
             <div className="socials">
               <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">
@@ -46,9 +46,7 @@ const Footer = () => {
             <h4>Services</h4>
             <ul>
               <li>Rendering</li>
-              <li>Formwork &amp; Framework</li>
               <li>Hard Landscaping</li>
-              <li>Civil Engineering &amp; Groundworks</li>
             </ul>
           </div>
           <div>
@@ -60,7 +58,7 @@ const Footer = () => {
               <li>
                 <a href={`mailto:${company.email}`}>{company.email}</a>
               </li>
-              <li>{company.address}</li>
+              <li>Based in Barking &amp; Luton, serving Greater London and the South East.</li>
             </ul>
           </div>
         </div>

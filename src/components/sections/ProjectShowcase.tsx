@@ -21,7 +21,7 @@ const ProjectShowcase = () => {
   return (
     <section className="section section-muted">
       <div className="container">
-        <SectionHeading title="Project Showcase" subtitle="Premium Finishes Across the UK" />
+        <SectionHeading title="Project Showcase" subtitle="Premium Finishes Across East London & Greater London" />
         <div className="showcase-grid">
           {projects.map((project, index) => (
             <ScrollReveal key={project.caption} delay={150 + index * 120} variant="scale">

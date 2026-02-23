@@ -1,4 +1,4 @@
-export type ServiceId = "rendering" | "formwork" | "landscaping" | "groundworks";
+export type ServiceId = "rendering" | "landscaping";
 
 export type ServiceCard = {
   id: ServiceId;
@@ -14,34 +14,17 @@ export const serviceCards: ServiceCard[] = [
     id: "rendering",
     title: "Rendering",
     description:
-      "Premium render systems with flawless finishes, long-term protection, and approved K Rend & Weber application.",
+      "Premium render systems delivering refined finishes, weather protection, and K Rend & Weber approval.",
     image: "/images/rendering-09.jpg",
     href: "/rendering",
-    featured: true,
-  },
-  {
-    id: "formwork",
-    title: "Formwork & Framework",
-    description:
-      "Precision timber and steel formwork delivering compliant structural frameworks for residential and commercial builds.",
-    image: "/images/rendering-02.jpg",
-    href: "/services#formwork",
   },
   {
     id: "landscaping",
     title: "Hard Landscaping",
     description:
-      "Architectural patios, driveways, and retaining walls built with premium materials and lasting durability.",
-    image: "/images/rendering-06.jpg",
+      "Architectural patios, driveways, and retaining walls built for durability with crisp detailing.",
+    image: "/images/landscaping.png",
     href: "/services#landscaping",
-  },
-  {
-    id: "groundworks",
-    title: "Civil Engineering & Groundworks",
-    description:
-      "Foundations, drainage, and site preparation delivered by a safety-first, CSCS-certified workforce.",
-    image: "/images/rendering-07.jpg",
-    href: "/services#groundworks",
   },
 ];
 
@@ -56,31 +39,13 @@ export const serviceDetails = {
     image: "/images/rendering-01.jpg",
     cta: "Discuss Your Rendering Project",
   },
-  formwork: {
-    title: "Formwork & Framework",
-    paragraphs: [
-      "We deliver high-precision timber and steel formwork for residential and commercial concrete structures. Our team plans each phase to meet load-bearing standards, dimensional tolerances, and build schedules.",
-      "From foundations and retaining walls to complex structural frameworks, we provide safe, compliant installations with full structural compliance. Every formwork system is built to specification with attention to stability, accuracy, and site safety.",
-    ],
-    image: "/images/rendering-03.jpg",
-    cta: "Request a Quote",
-  },
   landscaping: {
     title: "Hard Landscaping",
     paragraphs: [
       "Our hard landscaping service focuses on premium outdoor builds that combine structural integrity with architectural quality. We deliver patios, driveways, retaining walls, block paving, garden walls, steps, and natural stone finishes with precise detailing.",
       "Every project is delivered with a focus on drainage, levels, and long-term durability, ensuring outdoor spaces look sharp and perform in all seasons."
     ],
-    image: "/images/rendering-04.jpg",
-    cta: "Request a Quote",
-  },
-  groundworks: {
-    title: "Civil Engineering & Groundworks",
-    paragraphs: [
-      "KYR provides groundworks and civil engineering solutions including excavation, site preparation, foundations, drainage, and utility installations. Our CSCS-certified workforce operates with strict safety standards and full regulatory compliance.",
-      "We coordinate groundworks with broader construction timelines to deliver a clean, stable, and fully compliant base for onward construction."
-    ],
-    image: "/images/rendering-05.jpg",
+    image: "/images/landscaping.png",
     cta: "Request a Quote",
   },
 };

@@ -418,6 +418,32 @@ p {
   padding-top: var(--header-height);
 }
 
+.hero-backgrounds {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.08);
+  filter: brightness(0.75) saturate(0.9) blur(2px);
+  transition: opacity 2.4s ease-in-out, transform 6.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 2.4s ease-in-out;
+  will-change: opacity, transform, filter;
+}
+
+.hero-bg.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: brightness(1) saturate(1) blur(0);
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -453,6 +479,11 @@ p {
 
 .hero-subtitle {
   font-size: 18px;
+}
+
+.hero-secondary {
+  font-size: 16px;
+  color: var(--text-secondary);
 }
 
 .hero-eyebrow {
@@ -599,6 +630,30 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.split-image::after,
+.system-image::after,
+.service-image::after,
+.showcase-item::after,
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  opacity: 0;
+  transition: opacity var(--transition), inset var(--transition);
+  pointer-events: none;
+}
+
+.split-image:hover::after,
+.system-image:hover::after,
+.service-image:hover::after,
+.showcase-item:hover::after,
+.gallery-item:hover::after {
+  opacity: 1;
+  inset: 8px;
 }
 
 .feature-grid {
@@ -632,6 +687,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .service-card {
@@ -641,6 +697,9 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 2px solid rgba(201, 168, 76, 0.3);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -666,6 +725,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition);
 }
 
 .service-content {
@@ -673,6 +733,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
 }
 
 .service-heading {
@@ -716,6 +777,9 @@ p {
   border-radius: var(--radius);
   border-bottom: 2px solid rgba(201, 168, 76, 0.3);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .icon-card:hover,
@@ -723,6 +787,10 @@ p {
   transform: translateY(-6px);
   box-shadow: var(--shadow);
   border-bottom-color: var(--accent);
+}
+
+.value-card {
+  min-height: 230px;
 }
 
 .icon-wrapper {
@@ -735,6 +803,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .showcase-grid {
@@ -761,6 +830,7 @@ p {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: transform var(--transition);
 }
 
 .showcase-item figcaption {
@@ -1011,6 +1081,13 @@ p {
   border-radius: var(--radius);
 }
 
+.system-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
 .approval-badges {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1049,24 +1126,34 @@ p {
 
 .before-after-slider {
   position: relative;
-  height: 320px;
+  height: 360px;
+  width: 100%;
   overflow: hidden;
   border-radius: var(--radius);
   background-color: var(--bg-secondary);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .before-after-slider img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: none;
+  transform: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
-.before-image {
+.before-layer {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  overflow: hidden;
+  right: 0;
+  clip-path: inset(0 calc(100% - var(--position, 50%)) 0 0);
+  pointer-events: none;
 }
 
 .before-label,
@@ -1098,6 +1185,7 @@ p {
   transform: translateX(-20px);
   cursor: ew-resize;
   touch-action: none;
+  left: var(--position, 50%);
 }
 
 .handle-line {
@@ -1262,6 +1350,13 @@ p {
 
 .gallery-item:hover img {
   transform: scale(1.05);
+}
+
+.split-image:hover img,
+.system-image:hover img,
+.service-image:hover img,
+.showcase-item:hover img {
+  transform: scale(1.04);
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -1563,6 +1658,10 @@ p {
 
   .gallery-grid {
     column-count: 1;
+  }
+
+  .before-after-slider {
+    height: 240px;
   }
 
   .form-grid {
