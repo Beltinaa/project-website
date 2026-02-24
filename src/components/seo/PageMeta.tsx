@@ -12,7 +12,7 @@ type PageMetaProps = {
 };
 
 const SITE_NAME = "KYR Construction Ltd";
-const DEFAULT_IMAGE = "/images/rendering-01.jpg";
+const DEFAULT_IMAGE = "/images/rendering-01.webp";
 const DEFAULT_IMAGE_ALT = "Rendering project by KYR Construction Ltd";
 const DEFAULT_KEYWORDS =
   "rendering specialists, K Rend applicators, Weber applicators, silicone render, monocouche render, insulated render, external wall insulation, hard landscaping, Barking, Luton, Greater London, South East England, construction";
