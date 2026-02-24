@@ -4,7 +4,7 @@ export const company = {
   secondaryTagline: "Serving Barking, Luton & Greater London",
   phone: "+00447869240510",
   phoneTel: "+00447869240510",
-  email: "Kyrconstruction@yahoo.com",
+  email: "kyrconstructionltd@gmail.com",
   whatsapp: "00447869240510",
   serviceAreas: [
     "Barking, East London",

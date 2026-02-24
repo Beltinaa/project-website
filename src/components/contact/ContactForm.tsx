@@ -31,8 +31,16 @@ const normalizeMessage = (value: string) =>
     .trim();
 
 const validateEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(value);
+const normalizePhoneInput = (value: string) => {
+  const trimmed = value.trim();
+  const digits = trimmed.replace(/\D/g, "");
+  return trimmed.startsWith("+") ? `+${digits}` : digits;
+};
+
 const validatePhone = (value: string) => {
-  const digits = value.replace(/\D/g, "");
+  const trimmed = value.trim();
+  if (!/^\+?\d+$/.test(trimmed)) return false;
+  const digits = trimmed.replace(/\D/g, "");
   return digits.length >= 10 && digits.length <= 15;
 };
 
@@ -41,6 +49,7 @@ const ContactForm = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -53,16 +62,19 @@ const ContactForm = () => {
       message: MESSAGE_MAX,
     };
     const limit = maxLengths[name as keyof FormState];
-    const nextValue = typeof limit === "number" ? value.slice(0, limit) : value;
+    const rawValue = name === "phone" ? normalizePhoneInput(value) : value;
+    const nextValue = typeof limit === "number" ? rawValue.slice(0, limit) : rawValue;
     setValues((prev) => ({ ...prev, [name]: nextValue }));
     setErrors((prev) => ({ ...prev, [name]: undefined }));
+    if (submitted) setSubmitted(false);
+    if (submitError) setSubmitError(null);
   };
 
   const validate = (formValues: FormState) => {
     const nextErrors: FormErrors = {};
     const cleanedName = normalizeText(formValues.name);
     const cleanedEmail = normalizeText(formValues.email);
-    const cleanedPhone = normalizeText(formValues.phone);
+    const cleanedPhone = normalizePhoneInput(formValues.phone);
     const cleanedMessage = normalizeMessage(formValues.message);
 
     if (!cleanedName) nextErrors.name = "Full name is required.";
@@ -73,7 +85,7 @@ const ContactForm = () => {
 
     if (!cleanedPhone) nextErrors.phone = "Phone number is required.";
     if (cleanedPhone && !validatePhone(cleanedPhone)) {
-      nextErrors.phone = "Enter a valid phone number with 10–15 digits.";
+      nextErrors.phone = "Use 10–15 digits with an optional leading + (no spaces or symbols).";
     }
 
     if (!cleanedEmail) nextErrors.email = "Email address is required.";
@@ -98,12 +110,13 @@ const ContactForm = () => {
     return nextErrors;
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (isSubmitting) return;
 
     const nextErrors = validate(values);
     setErrors(nextErrors);
+    setSubmitError(null);
 
     if (Object.keys(nextErrors).length > 0) return;
 
@@ -112,7 +125,7 @@ const ContactForm = () => {
 
     const payload = {
       name: normalizeText(values.name),
-      phone: normalizeText(values.phone),
+      phone: normalizePhoneInput(values.phone),
       email: normalizeText(values.email).toLowerCase(),
       service: SERVICE_OPTIONS.includes(values.service as (typeof SERVICE_OPTIONS)[number])
         ? values.service
@@ -120,18 +133,50 @@ const ContactForm = () => {
       message: normalizeMessage(values.message),
     };
 
-    const subject = encodeURIComponent("New project enquiry - KYR Construction Ltd");
-    const body = encodeURIComponent(
-      `Name: ${payload.name}\nPhone: ${payload.phone}\nEmail: ${payload.email}\nService Needed: ${payload.service}\n\nMessage:\n${payload.message}`
-    );
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
+    if (!endpoint) {
+      setSubmitError(`Message could not be sent right now. Please email us at ${company.email}.`);
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
-      setSubmitted(true);
+      const isFormspree = /formspree\.io/i.test(endpoint);
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: isFormspree
+          ? {
+              Accept: "application/json",
+            }
+          : {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+        body: isFormspree
+          ? (() => {
+              const formData = new FormData();
+              formData.append("name", payload.name);
+              formData.append("email", payload.email);
+              formData.append("phone", payload.phone);
+              formData.append("service", payload.service);
+              formData.append("message", payload.message);
+              formData.append("_replyto", payload.email);
+              return formData;
+            })()
+          : JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
       setValues(initialState);
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(`Message could not be sent. Please try again or email us at ${company.email}.`);
     } finally {
       setIsSubmitting(false);
     }
-
   };
 
   return (
@@ -209,10 +254,17 @@ const ContactForm = () => {
         />
         {errors.message && <span className="form-error">{errors.message}</span>}
       </label>
-      <p className="form-hint">
-        If your email client does not open, email us directly at {company.email} with your details.
-      </p>
-      {submitted && <p className="form-success">Thanks for your enquiry. We will be in touch shortly.</p>}
+      <p className="form-hint">We will review your request and get back to you shortly.</p>
+      {submitError && (
+        <p className="form-submit-error" role="alert">
+          {submitError}
+        </p>
+      )}
+      {submitted && (
+        <p className="form-success" role="status" aria-live="polite">
+          Thanks for your enquiry. We will be in touch shortly.
+        </p>
+      )}
       <Button type="submit" variant="accent" size="md" isLoading={isSubmitting}>
         {isSubmitting ? "Sending" : "Send Message"}
       </Button>
