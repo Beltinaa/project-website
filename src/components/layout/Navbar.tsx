@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link className="brand" to="/" aria-label={`${company.name} home`}>
           <img
             className="brand-icon"
-            src="/images/icon.png"
+            src="/images/icon.webp"
             alt={`${company.name} icon`}
             loading="eager"
           />
@@ -87,10 +87,10 @@ const Navbar = () => {
           GET A FREE QUOTE
         </Button>
         <div className="nav-socials">
-          <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/kyrconstructionltd?igsh=MWRjczJyNWc4ZDBvbg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer">
             <FaInstagram size={24} />
           </a>
-          <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61588065262334" aria-label="Facebook" target="_blank" rel="noreferrer">
             <FaFacebookF size={24} />
           </a>
         </div>

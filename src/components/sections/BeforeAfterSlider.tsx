@@ -5,11 +5,12 @@ export type BeforeAfterSliderProps = {
   before: string;
   after: string;
   caption: string;
+  mirrorBefore?: boolean;
 };
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
-const BeforeAfterSlider = ({ before, after, caption }: BeforeAfterSliderProps) => {
+const BeforeAfterSlider = ({ before, after, caption, mirrorBefore }: BeforeAfterSliderProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState(50);
   const [dragging, setDragging] = useState(false);
@@ -64,7 +65,7 @@ const BeforeAfterSlider = ({ before, after, caption }: BeforeAfterSliderProps) =
             src={before}
             alt="Before rendering"
             loading="lazy"
-            className="before-image"
+            className={`before-image ${mirrorBefore ? "mirrored" : ""}`}
             draggable={false}
             onDragStart={(event) => event.preventDefault()}
           />

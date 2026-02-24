@@ -4,15 +4,15 @@ import SectionHeading from "../ui/SectionHeading";
 
 const projects = [
   {
-    image: "/images/rendering-08.jpg",
+    image: "/images/rendering-08.webp",
     caption: "Contemporary render finish — London",
   },
   {
-    image: "/images/rendering-07.jpg",
+    image: "/images/rendering-07.webp",
     caption: "Façade refurbishment — Surrey",
   },
   {
-    image: "/images/rendering-10.png",
+    image: "/images/rendering-10.webp",
     caption: "Luxury render detailing — Hertfordshire",
   },
 ];

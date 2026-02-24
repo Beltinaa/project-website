@@ -15,7 +15,7 @@ export const renderSystems: RenderSystem[] = [
       "Long-term colour stability in UK weather",
       "Sleek, contemporary finish",
     ],
-    image: "/images/rendering-02.jpg",
+    image: "/images/rendering-02.webp",
   },
   {
     title: "K Rend Monocouche Render",
@@ -26,7 +26,7 @@ export const renderSystems: RenderSystem[] = [
       "Impact-resistant performance",
       "Reduced maintenance requirements",
     ],
-    image: "/images/rendering-03.jpg",
+    image: "/images/rendering-03.webp",
   },
   {
     title: "Weber Render Systems",
@@ -37,7 +37,7 @@ export const renderSystems: RenderSystem[] = [
       "Flexible textures and finishes",
       "Trusted specification for developers",
     ],
-    image: "/images/rendering-04.jpg",
+    image: "/images/rendering-04.webp",
   },
   {
     title: "Insulated Render and EWI Systems",
@@ -48,7 +48,7 @@ export const renderSystems: RenderSystem[] = [
       "Reduced energy costs",
       "Modernised exterior appearance",
     ],
-    image: "/images/rendering-05.jpg",
+    image: "/images/rendering-05.webp",
   },
   {
     title: "Acrylic and Mineral Renders",
@@ -59,6 +59,6 @@ export const renderSystems: RenderSystem[] = [
       "Durable performance",
       "Suitable for traditional and modern builds",
     ],
-    image: "/images/rendering-06.jpg",
+    image: "/images/rendering-06.webp",
   },
 ];

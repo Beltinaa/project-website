@@ -16,7 +16,7 @@ const Services = () => {
       <PageHero
         title="Our Services"
         subtitle="Rendering Specialists & Approved K Rend and Weber Applicators"
-        backgroundImage="/images/background2.png"
+        backgroundImage="/images/background2.webp"
       />
       <section className="section service-detail service-feature" id="rendering">
         <div className="container split">

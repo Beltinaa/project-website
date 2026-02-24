@@ -16,7 +16,7 @@ const About = () => {
       <PageHero
         title="About KYR Construction"
         subtitle="Rendering-First Craftsmanship Built on 15+ Years of Experience"
-        backgroundImage="/images/background3.png"
+        backgroundImage="/images/background3.webp"
       />
       <section className="section">
         <div className="container split">
@@ -42,7 +42,7 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal variant="scale" delay={120}>
             <div className="split-image">
-              <img src="/images/rendering-09.jpg" alt="KYR Construction team on site" loading="lazy" />
+              <img src="/images/rendering-09.webp" alt="KYR Construction team on site" loading="lazy" />
               <div className="image-overlay" aria-hidden="true" />
             </div>
           </ScrollReveal>
@@ -66,7 +66,7 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal variant="scale" delay={120}>
             <div className="split-image">
-              <img src="/images/rendering-08.jpg" alt="Construction workforce delivering premium finishes" loading="lazy" />
+              <img src="/images/rendering-08.webp" alt="Construction workforce delivering premium finishes" loading="lazy" />
               <div className="image-overlay" aria-hidden="true" />
             </div>
           </ScrollReveal>

@@ -11,7 +11,12 @@ const BeforeAfterGallery = () => {
         <div className="before-after-grid">
           {beforeAfterPairs.map((pair, index) => (
             <ScrollReveal key={pair.caption} delay={150 + index * 120}>
-              <BeforeAfterSlider before={pair.before} after={pair.after} caption={pair.caption} />
+              <BeforeAfterSlider
+                before={pair.before}
+                after={pair.after}
+                caption={pair.caption}
+                mirrorBefore={pair.mirrorBefore}
+              />
             </ScrollReveal>
           ))}
         </div>

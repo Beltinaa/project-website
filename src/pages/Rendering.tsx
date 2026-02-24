@@ -18,7 +18,7 @@ const Rendering = () => {
       <PageHero
         title="Rendering Specialists"
         subtitle="Approved Applicators of K Rend & Weber Systems"
-        backgroundImage="/images/background1.png"
+        backgroundImage="/images/background1.webp"
       />
       <RenderingIntro />
       <RenderSystems />

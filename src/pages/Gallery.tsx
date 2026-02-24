@@ -12,7 +12,7 @@ const Gallery = () => {
       <PageHero
         title="Our Work"
         subtitle="Premium Rendering and Construction Projects"
-        backgroundImage="/images/background4.png"
+        backgroundImage="/images/background4.webp"
       />
       <section className="section">
         <div className="container">

@@ -10,17 +10,17 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-logo">
-              <img src="/images/icon.png" alt={`${company.name} logo`} loading="lazy" />
+              <img src="/images/icon.webp" alt={`${company.name} logo`} loading="lazy" />
             </div>
             <p>
               Rendering specialists and approved K Rend &amp; Weber applicators based in Barking and Luton, serving
               Greater London, East London, and the South East. Available across the UK for larger projects on request.
             </p>
             <div className="socials">
-              <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/kyrconstructionltd?igsh=MWRjczJyNWc4ZDBvbg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <FaInstagram size={24} />
               </a>
-              <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61588065262334" aria-label="Facebook" target="_blank" rel="noreferrer">
                 <FaFacebookF size={24} />
               </a>
             </div>

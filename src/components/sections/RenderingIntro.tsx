@@ -26,7 +26,7 @@ const RenderingIntro = () => {
         </ScrollReveal>
         <ScrollReveal variant="scale" delay={120}>
           <div className="split-image">
-            <img src="/images/rendering-08.jpg" alt="Rendering specialists at work" loading="lazy" />
+            <img src="/images/rendering-08.webp" alt="Rendering specialists at work" loading="lazy" />
             <div className="image-overlay" aria-hidden="true" />
           </div>
         </ScrollReveal>

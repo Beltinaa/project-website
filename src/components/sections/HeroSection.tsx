@@ -5,12 +5,11 @@ import { company } from "../../data/company";
 
 const HeroSection = () => {
   const heroImages = [
-    "/images/main-background.png",
-    "/images/background1.png",
-    "/images/background2.png",
-    "/images/background3.png",
-    "/images/background4.png",
-    "/images/background5.png",
+    "/images/background1.webp",
+    "/images/background2.webp",
+    "/images/background3.webp",
+    "/images/background4.webp",
+    "/images/background5.webp",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [allowMotion, setAllowMotion] = useState(true);

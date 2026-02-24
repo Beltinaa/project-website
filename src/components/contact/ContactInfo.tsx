@@ -29,10 +29,10 @@ const ContactInfo = () => {
         <p>{company.hours.join(" | ")}</p>
       </div>
       <div className="socials">
-        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/kyrconstructionltd?igsh=MWRjczJyNWc4ZDBvbg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer">
           <FaInstagram size={24} />
         </a>
-        <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=61588065262334" aria-label="Facebook" target="_blank" rel="noreferrer">
           <FaFacebookF size={24} />
         </a>
       </div>
