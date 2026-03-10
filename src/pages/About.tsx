@@ -42,7 +42,8 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal variant="scale" delay={120}>
             <div className="split-image">
-              <img src="/images/rendering-09.webp" alt="KYR Construction team on site" loading="lazy" />
+              <img src="/images/rendering-13.webp" alt="KYR Construction team on site" loading="lazy"
+                    style={{ maxWidth: "500px", width: "100%" }} />
               <div className="image-overlay" aria-hidden="true" />
             </div>
           </ScrollReveal>
@@ -66,7 +67,7 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal variant="scale" delay={120}>
             <div className="split-image">
-              <img src="/images/rendering-08.webp" alt="Construction workforce delivering premium finishes" loading="lazy" />
+              <img src="/images/rendering-17.webp" alt="Construction workforce delivering premium finishes" loading="lazy" />
               <div className="image-overlay" aria-hidden="true" />
             </div>
           </ScrollReveal>
